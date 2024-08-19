@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: black;
+    color: white;
+    font-family: "Sofia", sans-serif;
+    overflow-x: hidden;
+}
+
+.navbar {
+    display: flex;
+    height: 60px;
+    border-bottom: 1.5px solid rgb(219, 219, 25);
+    align-items: center;
+    z-index: 5;
+    /* Pastikan nilai ini lebih tinggi dari landing */
+    justify-content: space-between;
+    padding: 0 7%;
+    background-color: black;
+    position: fixed;
+    /* Tetapkan positioning */
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+.navbar p {
+    font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  font-style: italic;
+
+}
+
+.navbar span {
+    color: rgb(219, 219, 25);
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
+}
+
+.menu a {
+    color: #fff;
+  display: inline-block;
+  font-size: 1.3rem;
+  margin: 0 1rem;
+}
+
+.menu a:hover {
+    color: rgb(219, 219, 25);
+    text-decoration: none;
+}
+
+.menu a::after {
+    content: "";
+    display: block;
+    border-bottom: 1px solid rgb(219, 219, 25);
+    transform: scaleX(0);
+    transform-origin: 0 0;
+    transition: 0.3s;
+}
+
+.menu a.active {
+    color: rgb(219, 219, 25);
+}
+
+.menu a.active::after {
+    transform: scaleX(0.8);
+}
+
+.menu a:hover::after {
+    transform: scaleX(0.8);
+}
+
+.navbar .icon-menu i{
+    color: #fff;
+    margin: 0 0.5rem;
+    font-size: 1.2rem;
+}
+
+
+.navbar .icon-menu i:hover {
+    cursor: pointer;
+    color: rgb(219, 219, 25);
+}
+
+
+
+
+.landing {
+    position: fixed;
+    background-color: rgb(86, 82, 82);
+    top: 0;
+    transition: 0.3s;
+    height: 100%;
+    width: 300px;
+    right: -100%;
+    z-index: 4;
+    padding-top: 60px;
+}
+
+.landing.active {
+    right: 0;
+}
+
+.landing .menu {
+    display: block;
+    padding: 20px 20px;
+}
+
+.landing .menu a {
+    display: block;
+    color: black;
+    padding-bottom: 20px;
+}
+
+.landing .menu a:hover {
+    color: rgb(219, 219, 25);
+}
+
+.landing .menu a:hover::after {
+    transform: scaleX(0.6);
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url("../gambar/tenda.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 0 7%;
+    background-repeat: no-repeat;
+    mask-image: linear-gradient(rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0));
+
+}
+.home .main{
+    max-width: 60rem;
+}
+.home .main h1 {
+    font-size: 5em;
+    line-height: 1.2;
+    color: rgb(32, 32, 32);
+}
+
+.home .main h1 span {
+    color: rgb(219, 219, 25);
+}
+
+.home .main p {
+    font-size: 1.6rem;
+    color: rgb(214, 207, 207);
+    margin: 1rem 0 1.8rem 0;
+}
+
+.home a {
+    background-color: rgb(234, 166, 9);
+    padding: 10px;
+    color: black;
+}
+
+.home .kopi {
+    background-image: url("../gambar/keluarga.jpg");
+    width: 700px;
+    height: 300px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-mask-image: url(../gambar/splash.svg);
+    -webkit-mask-size: 100%;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+}
+
+.navbar .search-form {
+    position: absolute;
+    top: 100%;
+    right: 7%;
+    background-color: #fff;
+    width: 50rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    /* transform: scaleY(0); */
+    transform-origin: top;
+    transition: 0.3s;
+}
+
+.navbar .search-form input {
+    height: 100%;
+    width: 100%;
+    font-size: 1.6rem;
+    color: black;
+    padding: 1rem;
+    border: none;
+    outline: none;
+}
+
+.navbar .search-form label {
+    cursor: pointer;
+    font-size: 2rem;
+    margin: 1.5rem;
+    color: black;
+}
+
+@media (max-width: 1366px) {
+    html {
+      font-size: 75%;
+    }
+  }
